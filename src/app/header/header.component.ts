@@ -1,5 +1,6 @@
+/// <reference path="../../../typings/index.d.ts" />
 import { Component, OnInit } from '@angular/core';
-
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _routes: Router, private _route: ActivatedRoute) { }
 
+  pageType = '';
   ngOnInit() {
-    $(document).ready(function () {
+    this.pageType = this._route.snapshot.url[0].path;
+    // tslint:disable-next-line:no-unused-expression
+    <any>$(document).ready(function () {
       const navbar = $('.menu_inner_area,.main_menu_bg,.menu_inner_area_two');
       const nav_offset_top = $('.main_menu_area,.main_menu_area_three,.main_menu_area_four,.main_menu_area_five,.error_area,.coming_soon_area').offset().top + 200;
       /*-------------------------------------------------------------------------------
@@ -35,6 +39,22 @@ export class HeaderComponent implements OnInit {
         navbar.removeClass('animated slideInDown');
       });
     });
+  }
+
+  about() {
+    console.log('her');
+    this._routes.navigate(['/about']);
+  }
+
+  home() {
+    console.log('her');
+    this._routes.navigate(['/home']);
+  }
+  selfplaced() {
+    this._routes.navigate(['/selfplaced']);
+  }
+  contact() {
+    this._routes.navigate(['/contact']);
   }
 
 }

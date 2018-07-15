@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -113,7 +114,6 @@ export class HomeComponent implements OnInit {
               origo: 'slidercenter',
               speed: 2000,
               levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 46, 47, 48, 49, 50, 55],
-              type: 'mouse',
               disable_onmobile: 'on'
             },
             shadow: 0,
@@ -127,7 +127,6 @@ export class HomeComponent implements OnInit {
             fullScreenAlignForce: 'off',
             fullScreenOffsetContainer: '',
             fullScreenOffset: '60px',
-            disableProgressBar: 'on',
             hideThumbsOnMobile: 'off',
             hideSliderAtLimit: 0,
             hideCaptionAtLimit: 0,
