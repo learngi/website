@@ -1,0 +1,73 @@
+<app-header></app-header>
+<!--================Banner Area =================-->
+<section class="banner_area">
+  <div class="container">
+    <div class="banner_inner">
+      <h2>User Registrations</h2>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li class="active">
+          <a href="private-banking.html">User Registrations</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!--================End Banner Area =================-->
+
+<!--================Faq Area =================-->
+<!--Start reapires-services-area -->
+<section class="row m0 business_service-area">
+  <div class="container">
+    <div class="row">
+      <div class="signup-form">
+        <form action="/examples/actions/confirmation.php" method="post">
+          <h2>Register</h2>
+          <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+
+          <div class="form-group">
+            <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="User Name" required="required">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="name" [(ngModel)]="name" placeholder="name Name" required="required">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" [(ngModel)]="email" placeholder="Email" required="required">
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" name="mobile" [(ngModel)]="mobile" placeholder="Email" required="required">
+          </div>
+
+          <div class="form-group">
+            <select class="form-control" name="course" [(ngModel)]="course_id">
+              <option>---Select Course----</option>
+              <option value="0">Python</option>
+              <option value="1">Angular</option>
+              <option value="2">Node js</option>
+              <option value="3">JavaScript</option>
+
+
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-inline">
+              <input type="checkbox" required="required"> I accept the
+              <a href="#">Terms of Use</a> &amp;
+              <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block" (click)="register()">Register Now</button>
+          </div>
+        </form>
+        <div class="text-center">Already have an account?
+          <a href="#">Sign in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

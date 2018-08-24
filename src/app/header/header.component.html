@@ -28,24 +28,24 @@
             </aside>
             <aside class="right_widget contact_widget">
                 <div class="w_contact">
-                    <a href="#">contact@straight.com</a>
-                    <a href="#">+(123) 456 7890</a>
+                    <a>contact@straight.com</a>
+                    <a>+(123) 456 7890</a>
                 </div>
                 <ul class="social_list">
                     <li>
-                        <a href="#">facebook</a>
+                        <a>facebook</a>
                     </li>
                     <li>
-                        <a href="#">Twitter</a>
+                        <a>Twitter</a>
                     </li>
                     <li>
-                        <a href="#">Instragram</a>
+                        <a>Instragram</a>
                     </li>
                     <li>
-                        <a href="#">Linkedin</a>
+                        <a>Linkedin</a>
                     </li>
                     <li>
-                        <a href="#">Google+</a>
+                        <a>Google+</a>
                     </li>
                 </ul>
             </aside>
@@ -58,44 +58,54 @@
     <div class="header_top">
         <div class="container">
             <div class="pull-left">
-                <a href="#">
-                    <i class="flaticon-phone-receiver"></i>1800 879 5247</a>
-                <a href="#">
+                <a>
+                    <i class="flaticon-phone-receiver"></i>+91-124-4274447</a>
+                <a>
                     <i class="flaticon-send"></i>Free Enquiry</a>
+                <a (click)="login()">
+                    <i class="flaticon-send"></i>Login</a>
+                <a (click)="register()">
+                    <i class="flaticon-send"></i>Enroll</a>
+                <a *ngIf="role == 'admin'" (click)="upload()">
+                    <i class="flaticon-send"></i>Upload</a>
             </div>
             <div class="pull-right">
                 <ul class="header_social">
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa fa-facebook"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa fa-twitter"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa fa-google-plus"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a>
                             <i class="fa fa-linkedin"></i>
                         </a>
                     </li>
                 </ul>
+
                 <select class="selectpicker">
                     <option>EN</option>
                     <option>BN</option>
                     <option>IN</option>
                 </select>
-                <div id="nav-icon1">
+                <a *ngIf="token" (click)="logout()">
+                    LogOut
+                </a>
+                <!-- <div id="nav-icon1">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -111,8 +121,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">
-                        <img src="assets/img/logo-white.png" alt="">
+                    <a class="navbar-brand">
+                        <img src="assets/img/logo-white.png" alt="" style="width: 220px">
                     </a>
                 </div>
 
@@ -120,25 +130,29 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li [ngClass]="{'active':pageType == 'home'}" (click)="home()">
-                            <a>Home</a>
+                            <a data-toggle="dropdown" role="button" >Home</a>
                         </li>
                         <li [ngClass]="{'active':pageType == 'about'}" class="dropdown submenu" (click)="about()">
-                            <a class="dropdown-toggle">About Us</a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" >About Us</a>
 
                         </li>
-                        <li class="dropdown submenu" [ngClass]="{'active':pageType == 'selfplaced'}" (click)="selfplaced()">
+                        <!-- <li class="dropdown submenu" [ngClass]="{'active':pageType == 'selfplaced'}" (click)="selfplaced()">
                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Self Placed Training</a>
 
-                        </li>
-                        <li class="dropdown submenu">
+                        </li> -->
+                        <li class="dropdown submenu" [ngClass]="{'active':pageType == 'online'}" (click)="online()">
                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Online Training</a>
 
                         </li>
-                        <li class="dropdown submenu">
-                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Classroom Training</a>
+                        <li class="dropdown submenu" [ngClass]="{'active':pageType == 'classtraining'}" (click)="classTraining()">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ClassRoom Training</a>
 
                         </li>
-                        <li class="dropdown submenu">
+                        <li class="dropdown submenu" [ngClass]="{'active':pageType == 'internship'}" (click)="classTraining()">
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Internship</a>
+
+                        </li>
+                        <li class="dropdown submenu" [ngClass]="{'active':pageType == 'corporate'}" (click)="corporate()">
                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Corporate Batch</a>
 
                         </li>

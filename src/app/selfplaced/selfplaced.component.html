@@ -3,13 +3,13 @@
 <section class="banner_area">
   <div class="container">
     <div class="banner_inner">
-      <h2>Self Paced Trainings</h2>
+      <h2>Class Room Training</h2>
       <ul>
         <li>
           <a href="#">Home</a>
         </li>
         <li class="active">
-          <a href="service.html">Self Paced Training</a>
+          <a href="cases-details.html">Class Room Training</a>
         </li>
       </ul>
     </div>
@@ -17,126 +17,75 @@
 </section>
 <!--================End Banner Area =================-->
 
-<!--================Prictice Area =================-->
-<section class="practice_area sevice_offer pad_100">
+<!--================Cases Details Area =================-->
+<section class="cases_details_area pad_100">
   <div class="container">
-    <div class="left_title">
-      <h2>We Offer Services</h2>
-      <p>No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how
-        to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves
-        or pursues or desires to obtain pain.</p>
+    <div class="cases_details_inner">
+      <div class="row cases_image_inner">
+        <div class="col-sm-12">
+          <div class="cases_img">
+            <img src="assets/img/cases/case-details-1.jpg" alt="">
+          </div>
+        </div>
+       
+      </div>
+      <div class="left_title">
+        <h2>About the Angular</h2>
+      </div>
+      <p>AngularJS is a structural framework for dynamic web apps. With AngularJS, designers can use HTML as the template language and it allows for the extension of HTML's syntax to convey the application's components effortlessly. Angular makes much of the code you would otherwise have to write completely redundant</p>
+     
     </div>
-    <div class="row practice_inner">
-      <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="practice_item">
-          <div class="p_img_inner">
-            <a class="p_img" href="private-banking.html">
-              <img src="assets/img/practice/practice-1.jpg" alt="">
-            </a>
-            <a class="p_hover" href="private-banking.html">
-              <h5>View Details</h5>
-            </a>
-          </div>
-          <a href="#">
-            <h4>Private Banking</h4>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="practice_item">
-          <div class="p_img_inner">
-            <a class="p_img" href="wealth-management.html">
-              <img src="assets/img/practice/practice-2.jpg" alt="">
-            </a>
-            <a class="p_hover" href="wealth-management.html">
-              <h5>View Details</h5>
+    <div class="row planing-box">
+        <div class="col-md-6 ">
+          <div class="practice_item">
+            <div class="p_img_inner" *ngIf="token">
+              <video width="420" height="340" controls>
+                <source src="assets/img/video/video1.mp4" type="video/mp4">
+              </video>
+  
+            </div>
+            <div class="video_box" *ngIf="token == null">
+              <br>
+              <img src="assets/img/video/video-1.jpg" alt="">
+              <a class="popup-youtube">
+                <i class="flaticon-play-button"></i>
+              </a>
+            </div>
+            <a >
+              <h4>Angular Basics</h4>
             </a>
           </div>
-          <a href="wealth-management.html">
-            <h4>Wealth Management</h4>
-          </a>
+  
+        </div>
+        <div class="col-md-6">
+            <div class="practice_item">
+                <div class="p_img_inner" *ngIf="token">
+                  <video width="420" height="340" controls>
+                    <source src="assets/img/video/video1.mp4" type="video/mp4">
+                  </video>
+      
+                </div>
+                <div class="video_box" *ngIf="token == null">
+                  <br>
+                  <img src="assets/img/video/video-1.jpg" alt="">
+                  <a class="popup-youtube">
+                    <i class="flaticon-play-button"></i>
+                  </a>
+                </div>
+                <a >
+                  <h4>Routing</h4>
+                </a>
+              </div>
         </div>
       </div>
-      <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="practice_item">
-          <div class="p_img_inner">
-            <a class="p_img" href="business.html">
-              <img src="assets/img/practice/practice-3.jpg" alt="">
-            </a>
-            <a class="p_hover" href="business.html">
-              <h5>View Details</h5>
-            </a>
-          </div>
-          <a href="business.html">
-            <h4>Business Developmentg</h4>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="practice_item">
-          <div class="p_img_inner">
-            <a class="p_img" href="marketing.html">
-              <img src="assets/img/practice/practice-4.jpg" alt="">
-            </a>
-            <a class="p_hover" href="marketing.html">
-              <h5>View Details</h5>
-            </a>
-          </div>
-          <a href="marketing.html">
-            <h4>Marketing Analysis</h4>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="practice_item">
-          <div class="p_img_inner">
-            <a class="p_img" href="stragetic-planning.html">
-              <img src="assets/img/practice/practice-5.jpg" alt="">
-            </a>
-            <a class="p_hover" href="stragetic-planning.html">
-              <h5>View Details</h5>
-            </a>
-          </div>
-          <a href="stragetic-planning.html">
-            <h4>Stragetic Planning</h4>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="practice_item">
-          <div class="p_img_inner">
-            <a class="p_img" href="sales-trade.html">
-              <img src="assets/img/practice/practice-6.jpg" alt="">
-            </a>
-            <a class="p_hover" href="sales-trade.html">
-              <h5>View Details</h5>
-            </a>
-          </div>
-          <a href="sales-trade.html">
-            <h4>Sales & Trade</h4>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-4 col-xs-6">
-        <div class="practice_item">
-          <div class="p_img_inner">
-            <a class="p_img" href="financial.html">
-              <img src="assets/img/practice/practice-7.jpg" alt="">
-            </a>
-            <a class="p_hover" href="financial.html">
-              <h5>View Details</h5>
-            </a>
-          </div>
-          <a href="financial.html">
-            <h4>Financial Planning</h4>
-          </a>
-        </div>
-      </div>
-    </div>
   </div>
+
 </section>
-<!--================End Prictice Area =================-->
+<!--================End Cases Details Area =================-->
 
-<!--================End Video Area =================-->
+<!--================What Did Area =================-->
 
+<!--================End What Did Area =================-->
+
+<!--================End Result info Area =================-->
 <app-footer></app-footer>

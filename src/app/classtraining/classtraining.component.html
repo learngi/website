@@ -1,0 +1,158 @@
+<app-header></app-header>
+<!--================Banner Area =================-->
+<section class="banner_area">
+  <div class="container">
+    <div class="banner_inner">
+      <h2>Class Room Training</h2>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li class="active">
+          <a href="cases-details.html">Class Room Training</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!--================End Banner Area =================-->
+
+<!--================Cases Details Area =================-->
+<section class="cases_details_area pad_100" style="padding-top: 40px;
+">
+  <div class="container">
+    <table class="table table-hover">
+      <thead style="color: #4b84da;">
+        <tr>
+          <th>Course</th>
+          <th>Faculty</th>
+          <th>Date/Time</th>
+          <th>Duration</th>
+          <th>Register</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Angular</td>
+          <td>Mr. Bhaskar</td>
+          <td>Aug 19th @10:00 AM</td>
+          <td>30 Days</td>
+          <td>
+            <button class="btn btn-info" data-toggle="modal" data-target="#myModal">Register</button>
+          </td>
+        </tr>
+        <tr>
+            <td>Data Science</td>
+            <td>Mr. Vijay</td>
+            <td>Aug 21st @10:00 AM</td>
+            <td>30 Days</td>
+            <td>
+              <button class="btn btn-info" data-toggle="modal" data-target="#myModal">Register</button>
+            </td>
+          </tr>
+          <tr>
+              <td>SAP</td>
+              <td>Mr. Raju</td>
+              <td>Aug 23rd @10:00 AM</td>
+              <td>30 Days</td>
+              <td>
+                <button class="btn btn-info" data-toggle="modal" data-target="#myModal">Register</button>
+              </td>
+            </tr>
+            <tr>
+                <td>.Net</td>
+                <td>Mr. Karthik</td>
+                <td>Aug 25th @10:00 AM</td>
+                <td>30 Days</td>
+                <td>
+                  <button class="btn btn-info" data-toggle="modal" data-target="#myModal">Register</button>
+                </td>
+              </tr>
+              <tr>
+                  <td>Andirod</td>
+                  <td>Mr. Manoj</td>
+                  <td>Aug 27th @10:00 AM</td>
+                  <td>30 Days</td>
+                  <td>
+                    <button class="btn btn-info" data-toggle="modal" data-target="#myModal">Register</button>
+                  </td>
+                </tr>
+                <tr>
+                    <td>Oracel</td>
+                    <td>Mr. Santhosh Doe</td>
+                    <td>Aug 29th @10:00 AM</td>
+                    <td>30 Days</td>
+                    <td>
+                      <button class="btn btn-info" data-toggle="modal" data-target="#myModal">Register</button>
+                    </td>
+                  </tr>
+                  
+
+      </tbody>
+    </table>
+  </div>
+
+</section>
+<!--================End Cases Details Area =================-->
+
+<!--================What Did Area =================-->
+
+<!--================End What Did Area =================-->
+
+<!--================End Result info Area =================-->
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Classtraining Registraion</h4>
+      </div>
+      <div class="modal-body">
+        <div id="right_container">
+          <div id="signup_container" class="hidden-xs">
+            <form role="form" method="POST" novalidate="" class="signup-form ng-pristine "name="signupForm1"> 
+              <div class="form-group">
+                <label for="email" class="control-label">Email:</label>
+                   <input type="email" class="form-control input-sm ng-pristine "
+                  ng-model="user.email" name="email"
+                  placeholder="john@example.com" required="" style="">
+              </div>
+              <div class="form-group">
+                  <label for="email" class="control-label">Mobile:</label>
+                     <input type="number" class="form-control input-sm ng-pristine "
+                    ng-model="user.email" name="email"
+                    placeholder="john@example.com" required="" style="">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="control-label">Course:</label>
+                       <select class="form-control">
+                         <option value="">Angular</option>
+                         <option value="">Sap</option>
+                         <option value="">Android</option>
+                         <option value="">Data Science</option>
+                         <option value="">.Net</option>
+
+                       </select>
+                  </div>
+
+              <div class="form-group">
+                <!-- ngIf: showButton -->
+                
+                <!-- end ngIf: showButton -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+          <button data-dismiss="modal" type="submit" ng-if="showButton" class="btn btn-primary ng-scope">Sign up</button>
+        <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<app-footer></app-footer>

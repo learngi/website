@@ -1,0 +1,72 @@
+<app-header></app-header>
+<!--================Banner Area =================-->
+<section class="banner_area">
+  <div class="container">
+    <div class="banner_inner">
+      <h2>User Registrations</h2>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li class="active">
+          <a href="private-banking.html">User Registrations</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!--================End Banner Area =================-->
+
+<!--================Faq Area =================-->
+<!--Start reapires-services-area -->
+<section class="row m0 business_service-area">
+  <div class="container">
+    <div class="row">
+      <div class="panel panel-default">
+        <div class="panel-heading">Panel Heading
+          <span>
+            <button class="btn btn-sm btn-info pull-right" (click)="addForm()">Add</button>
+          </span>
+        </div>
+        <div class="panel-body">
+          <table class="table table-stripped" *ngIf="!showForm">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Course</th>
+                <th>Video name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>Angular</td>
+                <td>www.angular.com</td>
+
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="row" *ngIf="showForm">
+            <form [formGroup]="form">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <select name="" id="" class="form-control" formControlName="course_id">
+                    <option value="0">Ptyhon</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="file" id="video" (change)="onFileChange($event)" #fileInput>
+                </div>
+              </div>
+              <button class="btn btn-md btn-success" (click)="onSubmit()">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

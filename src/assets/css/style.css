@@ -123,6 +123,11 @@ i:before {
 .pad_100 {
   padding: 100px 0px;
 }
+.pad_30 {
+  padding: 30px 0px;
+}
+
+
 
 /* Main title css
 ============================================================================================ */
@@ -285,7 +290,7 @@ i:before {
 /* Main Header Area css
 ============================================================================================ */
 .header_top {
-  background: #2d2b34;
+  background:#0b1525;
   padding-bottom: 28px;
 }
 
@@ -538,13 +543,13 @@ i:before {
   margin-bottom: 0px;
   border-radius: 3px;
   border: none;
-  background: #e2a062;
+  background: #4b84da;
   text-align: right;
 }
 
 .menu_inner_area .navbar.navbar-default .navbar-header .navbar-brand {
   padding: 0px 30px;
-  background: #e09254;
+  background: #4b84da;
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   min-height: 86px;
@@ -565,7 +570,7 @@ i:before {
   height: 0;
   border-style: solid;
   border-width: 86px 62px 0 0;
-  border-color: #e09254 transparent transparent transparent;
+  border-color: #4b84da transparent transparent transparent;
   position: absolute;
 }
 
