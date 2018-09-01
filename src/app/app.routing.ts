@@ -12,6 +12,7 @@ import { TraningComponent } from './traning/traning.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
 import { UploadComponent } from './upload/upload.component';
+import { IntershipComponent } from './intership/intership.component';
 
 const appRoutes: Routes = [
   {
@@ -23,7 +24,7 @@ const appRoutes: Routes = [
     component: AboutComponent
   },
   {
-    path: 'selfplaced',
+    path: 'selfplaced/:type',
     component: SelfplacedComponent
   },
   {
@@ -53,6 +54,10 @@ const appRoutes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'intership',
+    component: IntershipComponent
   },
   {
     path: 'upload',

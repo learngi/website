@@ -22,6 +22,7 @@ import { LoginService } from './login/login.service';
 import { UploadComponent } from './upload/upload.component';
 import {AuthGuard} from './common/auth.gaurd';
 import {UploadService} from './upload/upload.service';
+import { IntershipComponent } from './intership/intership.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import {UploadService} from './upload/upload.service';
     TraningComponent,
     RegistrationComponent,
     LoginComponent,
-    UploadComponent
+    UploadComponent,
+    IntershipComponent
   ],
   imports: [BrowserModule, routing, HttpModule, FormsModule, ReactiveFormsModule],
   providers: [AuthGuard, RegistrationService, LoginService, UploadService],

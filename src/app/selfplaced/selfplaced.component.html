@@ -3,13 +3,13 @@
 <section class="banner_area">
   <div class="container">
     <div class="banner_inner">
-      <h2>Class Room Training</h2>
+      <h2>Online Training</h2>
       <ul>
         <li>
           <a href="#">Home</a>
         </li>
         <li class="active">
-          <a href="cases-details.html">Class Room Training</a>
+          <a>Online Training</a>
         </li>
       </ul>
     </div>
@@ -17,71 +17,330 @@
 </section>
 <!--================End Banner Area =================-->
 
-<!--================Cases Details Area =================-->
-<section class="cases_details_area pad_100">
+<!--================Mean =================-->
+<section class="cases_details_area" style="padding: 10px 0px;">
   <div class="container">
-    <div class="cases_details_inner">
-      <div class="row cases_image_inner">
-        <div class="col-sm-12">
-          <div class="cases_img">
-            <img src="assets/img/cases/case-details-1.jpg" alt="">
+    <div class="row" *ngIf="type == 'oracle'">
+      <div class="col-md-7">
+        <div class="cases_details_inner ">
+
+          <div class="">
+            <span>
+              <img src="assets/img/practice/ora22.png" alt="" class="img-responsive">
+            </span>
+            <!-- <h2 class="text-center" style="color:#eee">About the Angular</h2> -->
           </div>
+          <p>
+            <br> Oracle database is a relational database management system. It is known as Oracle database, OracleDB or simply
+            Oracle. It is produced and marketed by Oracle Corporation. Oracle database is the first database designed for
+            enterprise grid computing. The enterprise grid computing provides the most flexible and cost effective way to
+            manage information and applications.</p>
+
         </div>
-       
-      </div>
-      <div class="left_title">
-        <h2>About the Angular</h2>
-      </div>
-      <p>AngularJS is a structural framework for dynamic web apps. With AngularJS, designers can use HTML as the template language and it allows for the extension of HTML's syntax to convey the application's components effortlessly. Angular makes much of the code you would otherwise have to write completely redundant</p>
-     
-    </div>
-    <div class="row planing-box">
-        <div class="col-md-6 ">
-          <div class="practice_item">
-            <div class="p_img_inner" *ngIf="token">
-              <video width="420" height="340" controls>
-                <source src="assets/img/video/video1.mp4" type="video/mp4">
-              </video>
-  
-            </div>
-            <div class="video_box" *ngIf="token == null">
-              <br>
-              <img src="assets/img/video/video-1.jpg" alt="">
-              <a class="popup-youtube">
-                <i class="flaticon-play-button"></i>
-              </a>
-            </div>
-            <a >
-              <h4>Angular Basics</h4>
-            </a>
-          </div>
-  
-        </div>
-        <div class="col-md-6">
+        <div class="row planing-box">
+          <div class="col-md-6 ">
             <div class="practice_item">
-                <div class="p_img_inner" *ngIf="token">
-                  <video width="420" height="340" controls>
-                    <source src="assets/img/video/video1.mp4" type="video/mp4">
-                  </video>
-      
-                </div>
-                <div class="video_box" *ngIf="token == null">
-                  <br>
-                  <img src="assets/img/video/video-1.jpg" alt="">
-                  <a class="popup-youtube">
-                    <i class="flaticon-play-button"></i>
-                  </a>
-                </div>
-                <a >
-                  <h4>Routing</h4>
+              <div class="p_img_inner" *ngIf="token">
+                <video width="420" height="340" controls>
+                  <source src="assets/img/video/video1.mp4" type="video/mp4">
+                </video>
+
+              </div>
+              <div class="video_box" *ngIf="token == null">
+                <br>
+                <img src="assets/img/video/video-1.jpg" alt="">
+                <a class="popup-youtube">
+                  <i class="flaticon-play-button"></i>
                 </a>
               </div>
+              <a>
+                <h4> Fusion Demo1</h4>
+              </a>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <div class="practice_item">
+              <div class="p_img_inner" *ngIf="token">
+                <video width="420" height="340" controls>
+                  <source src="assets/img/video/video1.mp4" type="video/mp4">
+                </video>
+
+              </div>
+              <div class="video_box" *ngIf="token == null">
+                <br>
+                <img src="assets/img/video/video-1.jpg" alt="">
+                <a class="popup-youtube">
+                  <i class="flaticon-play-button"></i>
+                </a>
+              </div>
+              <a>
+                <h4>Fusion Demo2</h4>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="col-md-5">
+
+      </div>
+    </div>
+    <div class="row" *ngIf="type == 'mean'">
+      <div class="col-md-7">
+        <div class="cases_details_inner ">
+
+          <div class="">
+            <span>
+              <img src="assets/img/practice/ajs.png" alt="" class="img-responsive">
+            </span>
+            <!-- <h2 class="text-center" style="color:#eee">About the Angular</h2> -->
+          </div>
+          <p>
+            <br> AngularJS is a structural framework for dynamic web apps. With AngularJS, designers can use HTML as the template
+            language and it allows for the extension of HTML's syntax to convey the application's components effortlessly.
+            Angular makes much of the code you would otherwise have to write completely redundant</p>
+
+        </div>
+        <div class="row planing-box">
+          <div class="col-md-6 ">
+            <div class="practice_item">
+              <div class="p_img_inner" *ngIf="token">
+                <video width="420" height="340" controls>
+                  <source src="assets/img/video/video1.mp4" type="video/mp4">
+                </video>
+
+              </div>
+              <div class="video_box" *ngIf="token == null">
+                <br>
+                <img src="assets/img/video/video-1.jpg" alt="">
+                <a class="popup-youtube">
+                  <i class="flaticon-play-button"></i>
+                </a>
+              </div>
+              <a>
+                <h4>Creating A Simple Modal System In AngularJS
+                </h4>
+              </a>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <div class="practice_item">
+              <div class="p_img_inner" *ngIf="token">
+                <video width="420" height="340" controls>
+                  <source src="assets/img/video/video1.mp4" type="video/mp4">
+                </video>
+
+              </div>
+              <div class="video_box" *ngIf="token == null">
+                <br>
+                <img src="assets/img/video/video-1.jpg" alt="">
+                <a class="popup-youtube">
+                  <i class="flaticon-play-button"></i>
+                </a>
+              </div>
+              <a>
+                <h4>Creating A Reusable Timer In AngularJS
+                </h4>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+
+      </div>
+    </div>
+    <div class="row" *ngIf="type == 'ds'">
+      <div class="col-md-7">
+        <div class="cases_details_inner ">
+
+          <div class="">
+            <span>
+              <img src="assets/img/practice/ds.jpg" alt="" class="img-responsive">
+            </span>
+            <!-- <h2 class="text-center" style="color:#eee">About the Angular</h2> -->
+          </div>
+          <p>
+            <br> Data Science with Python Training Overview Python Programming language is powerful open source language. It
+            is developed with data science tool and which is used to simplify and easily access the data and store the data
+            easily. By R Programming language we can easily manipulate the data, also it can help in the analysis of Data,
+            we can create the wonderful visualization and helps to access the high-quality content. This Data Science with
+            Python Training provides you to learn data manipulation and cleaning of data using python. Objectives of the
+            Course Complete basics of Data Science Understand the concepts of BigData and able to work in Data mining. Understand
+            the usage and how to use the tools like a tableau, map-reduce… Pre-requisites of the Course Any IT experienced
+            Professional who are interested to build their career in development/ data scientist. Any B.E/ B.Tech/ BSC/ MCA/
+            M.Sc Computers/ M.Tech/ BCA/ BCom College Students in any stream. Fresh Graduates. Contents [hide]
+          </p>
+          <ol>
+            <li> Data Science with Python Training Overview
+              <ol type="i">
+                <li>Objectives of the Course</li>
+                <li>Pre-requisites of the Course </li>
+                <li>Who can attend this course </li>
+              </ol>
+            </li>
+            <li>Data Science with Python Course
+              <ol type="i">
+                <li> Data Science with Python Course Introduction</li>
+                <li>Environment Set-Up </li>
+                <li>Jupyter Overview </li>
+                <li>Python Crash Course </li>
+                <li> Python for Data Analysis-NumPy </li>
+                <li>Python for Data Analysis-Pandas </li>
+                <li>Python for Data Analysis-Pandas Exercises </li>
+                <li>Python for Data Visualization-Matplotlib</li>
+                <li>Python for Data Visualization-Pandas Built-in Data Visualization</li>
+                <li>Python for Data Visualization-Seaborn </li>
+                <li>Python for Data Visualization-Plotly and Cufflinks </li>
+                <li>Python for Data Visualization-Geographical Plotting </li>
+                <li>Logistic Regression </li>
+                <li>K Nearest Neighbours </li>
+                <li>Decision Trees and Random Forests </li>
+                <li>Support Vector Machines
+                </li>
+                <li>K Means Clustering</li>
+                <li>Principal Component Analysis</li>
+                <li>Recommender Systems</li>
+                <li>Natural Language Processing </li>
+                <li> Big Data and Spark with Python </li>
+                <li> Neural Nests and Deep Learning </li>
+
+
+              </ol>
+            </li>
+          </ol>
+
+
+
+        </div>
+        <div class="row planing-box">
+          <div class="col-md-6 ">
+            <div class="practice_item">
+              <div class="p_img_inner" *ngIf="token">
+                <video width="420" height="340" controls>
+                  <source src="assets/img/video/video1.mp4" type="video/mp4">
+                </video>
+
+              </div>
+              <div class="video_box" *ngIf="token == null">
+                <br>
+                <img src="assets/img/video/video-1.jpg" alt="">
+                <a class="popup-youtube">
+                  <i class="flaticon-play-button"></i>
+                </a>
+              </div>
+              <a>
+                <h4>Angular Basics</h4>
+              </a>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <div class="practice_item">
+              <div class="p_img_inner" *ngIf="token">
+                <video width="420" height="340" controls>
+                  <source src="assets/img/video/video1.mp4" type="video/mp4">
+                </video>
+
+              </div>
+              <div class="video_box" *ngIf="token == null">
+                <br>
+                <img src="assets/img/video/video-1.jpg" alt="">
+                <a class="popup-youtube">
+                  <i class="flaticon-play-button"></i>
+                </a>
+              </div>
+              <a>
+                <h4>Routing</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+
+      </div>
+    </div>
+
+    <div class="row" *ngIf="type == 'ocf'">
+      <div class="col-md-7">
+        <div class="cases_details_inner ">
+
+          <div class="">
+            <span>
+              <img src="assets/img/practice/ORACLE-R12-FINANICLAS.jpg" alt="" class="img-responsive">
+            </span>
+            <!-- <h2 class="text-center" style="color:#eee">About the Angular</h2> -->
+          </div>
+          <p>
+            <br> Oracle Fusion Cloud Financials is the next level application suite of ERP financial Management solutions. Being
+            developed and deployed in Cloud environment it has very reliable features for Modern Finance. This application
+            allows business financial operations to increase productivity, lower costing and improve controlling. Fusion
+            Financials Cloud application has its own Ledger and Analytics, Payable and Assets, receivables, Collections,
+            Expenses. PRANTEK Training is providing Online training course for Oracle Fusion Cloud Financial modules as per
+            certification test. Our trainers having good amount of real time experience on Oracle Fusion Financials cloud
+            training. We cover each module and function with live training sessions with application. Trainees will learn
+            the corporate methods of application deployment. You can have on hand experience to manage the instance and application
+            completely. This course can be taken via online training, Self-paced training and Certification Training. We
+            do organize bulk or corporate training sessions for ERP organizations. Course Content Fusion Introduction Fusion
+            General Ledger Fusion Enterprise Structure Fusion Procurement Fusion Payables Fusion Payments Fusion Expenses
+            Fusion Rapid Implementation FBDIE-File Based Data Import & Export Fusion OTBI Reports Fusion Receivables Fusion
+            Assets Fusion Cash Management Fusion Tax Fusion SLA</p>
+
+        </div>
+        <div class="row planing-box">
+          <div class="col-md-6 ">
+            <div class="practice_item">
+              <div class="p_img_inner" *ngIf="token">
+                <video width="420" height="340" controls>
+                  <source src="assets/img/video/video1.mp4" type="video/mp4">
+                </video>
+
+              </div>
+              <div class="video_box" *ngIf="token == null">
+                <br>
+                <img src="assets/img/video/video-1.jpg" alt="">
+                <a class="popup-youtube">
+                  <i class="flaticon-play-button"></i>
+                </a>
+              </div>
+              <a>
+                <h4>Demo 1</h4>
+              </a>
+            </div>
+
+          </div>
+          <div class="col-md-6">
+            <div class="practice_item">
+              <div class="p_img_inner" *ngIf="token">
+                <video width="420" height="340" controls>
+                  <source src="assets/img/video/video1.mp4" type="video/mp4">
+                </video>
+
+              </div>
+              <div class="video_box" *ngIf="token == null">
+                <br>
+                <img src="assets/img/video/video-1.jpg" alt="">
+                <a class="popup-youtube">
+                  <i class="flaticon-play-button"></i>
+                </a>
+              </div>
+              <a>
+                <h4>Demo 2</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+
+      </div>
+    </div>
   </div>
 
 </section>
-<!--================End Cases Details Area =================-->
+
 
 <!--================What Did Area =================-->
 

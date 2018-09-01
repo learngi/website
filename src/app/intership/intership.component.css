@@ -1,0 +1,10 @@
+.header_text {
+  font-size: 15px;
+  font-weight: 900;
+  color: #4b84da;
+  padding-bottom: 5px;
+}
+.tech {
+  list-style-type: circle;
+  font-size: 14px;
+}

@@ -1,3 +1,11 @@
 .cases_item p{
     font-size: 16px 
 }
+.btn_border{
+    border: 1px solid;
+    padding: 5px;
+}
+.btn_border:hover {
+    cursor: pointer;
+    background: #2222
+}

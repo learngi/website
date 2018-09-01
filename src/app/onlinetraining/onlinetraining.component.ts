@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-onlinetraining',
@@ -14,6 +14,6 @@ export class OnlinetrainingComponent implements OnInit {
   }
 
   mean(type) {
-    this._routes.navigate(['/selfplaced']);
+    this._routes.navigate([`/selfplaced/${type}`]);
   }
 }

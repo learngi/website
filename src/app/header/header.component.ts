@@ -1,6 +1,7 @@
 /// <reference path="../../../typings/index.d.ts" />
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+declare var $;
 
 @Component({
   selector: 'app-header',
@@ -15,14 +16,14 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.pageType = this._route.snapshot.url[0].path;
     // tslint:disable-next-line:no-unused-expression
-    $('.bar_menu,#nav-icon1').on('click', function() {
-      if ($('.right_sidebar_menu').hasClass('open')) {
-        $('.right_sidebar_menu').removeClass('open');
-      } else {
-        $('.right_sidebar_menu').addClass('open');
-      }
-      return false;
-    });
+    // $('.bar_menu,#nav-icon1').on('click', function() {
+    //   if ($('.right_sidebar_menu').hasClass('open')) {
+    //     $('.right_sidebar_menu').removeClass('open');
+    //   } else {
+    //     $('.right_sidebar_menu').addClass('open');
+    //   }
+    //   return false;
+    // });
     // tslint:disable-next-line:no-unused-expression
     <any>$(document).ready(function() {
       const navbar = $('.menu_inner_area,.main_menu_bg,.menu_inner_area_two');
@@ -90,5 +91,8 @@ export class HeaderComponent implements OnInit {
   }
   upload() {
     this._routes.navigate(['/upload']);
+  }
+  internship() {
+    this._routes.navigate(['/intership']);
   }
 }
