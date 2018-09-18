@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { ToastrModule } from 'ng6-toastr-notifications';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,9 +23,10 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationService } from './registration/register.service';
 import { LoginService } from './login/login.service';
 import { UploadComponent } from './upload/upload.component';
-import {AuthGuard} from './common/auth.gaurd';
-import {UploadService} from './upload/upload.service';
+import { AuthGuard } from './common/auth.gaurd';
+import { UploadService } from './upload/upload.service';
 import { IntershipComponent } from './intership/intership.component';
+import {ApiService} from './common/api.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,8 +45,16 @@ import { IntershipComponent } from './intership/intership.component';
     UploadComponent,
     IntershipComponent
   ],
-  imports: [BrowserModule, routing, HttpModule, FormsModule, ReactiveFormsModule],
-  providers: [AuthGuard, RegistrationService, LoginService, UploadService],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    routing,
+    HttpModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
+  ],
+  providers: [AuthGuard, RegistrationService, LoginService, UploadService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

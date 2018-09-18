@@ -23,7 +23,7 @@ export class LoginService {
       .post(AppSettings.API.LOGIN, body, this.options)
       .map((response: Response) => {
         const data = response.json();
-        if (data.success) {
+        if (data) {
           if (data && data.token) {
             console.log('ff', data);
             sessionStorage.setItem('token', data.token);
@@ -39,10 +39,10 @@ export class LoginService {
       });
   }
   // forgot password api
-  forgetPassword(values: any = '') {
+  register(values: any = '') {
     const body = JSON.stringify(values);
     return this.http
-      .post(AppSettings.API.FORGOT_PASSWORD, body, this.token())
+      .post(AppSettings.API.REGISTER, body, )
       .map((response: Response) => response.json());
   }
 

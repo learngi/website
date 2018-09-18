@@ -25,7 +25,7 @@ export class RegistrationComponent implements OnInit {
     };
     console.log('body', body);
     this._registrationService.register(body).subscribe(data => {
-      if (data.success) {
+      if (data) {
         console.log('success');
       }
     });

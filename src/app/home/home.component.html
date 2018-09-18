@@ -2,17 +2,103 @@
 
 <!--================Slider Area =================-->
 <section class="main_slider_area">
-    <div id="main_slider" class="rev_slider" data-version="5.3.1.6">
-        <ul>
+    <div class="rev_slider" data-version="5.3.1.6">
+
+        <div class="row pad_100 home_banner">
+            <div class="col-md-1"></div>
+            <div class="col-md-5 ">
+                <h3 style="color:#ccc; padding-bottom:15px">Best Training Institute ? RST Global in Top List !</h3>
+                <div class="home_table">
+                    <p>
+                        <i class="fa fa-hand-o-right icon_size"></i>
+                        <span class="p_text">Exposure to industry oriented Training </span><br />
+                        <small style="margin-left: 44px;">We provide Real time Job oriented training</small>
+                    </p>
+                    <p>
+                        <i class="fa fa-hand-o-right icon_size"></i>
+                        <span class="p_text">Enriched Leaning Experience </span><br>
+                        <small style="margin-left: 44px;">Digital classroom & well furnished Lab infrastructure</small>
+                    </p>
+                    <p>
+                        <i class="fa fa-hand-o-right icon_size"></i>
+                        <span class="p_text">Accelarated Career growth </span><br>
+                        <small style="margin-left: 44px;">Enroll now & start your Career growth</small>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3 home_form">
+                <h4 class="text-center">Register for Free Demo</h4>
+                <br>
+                <div id="signup_container" class="hidden-xs">
+                    <form role="form" autocomplete="off" novalidate="" class="signup-form ng-pristine " name="signupForm1">
+                        <div class="form-group">
+                            <!-- <label for="email" class="control-label">Email:</label> -->
+                            <input type="email" [(ngModel)] ="email" class="form-control input-sm ng-pristine " name="email"
+                                placeholder="Email" required="" style="">
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="email" class="control-label">Password</label>
+                            <input type="password" class="form-control input-sm ng-pristine " name="email" placeholder="password"
+                                required="" style="">
+                        </div> -->
+                        <div class="form-group">
+                            <!-- <label for="email" class="control-label">Name:</label> -->
+                            <input type="text"  [(ngModel)] ="name"  class="form-control input-sm ng-pristine " name="name"
+                                placeholder="Name" required="" style="">
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="email" class="control-label">Mobile:</label> -->
+                            <input type="number" [(ngModel)] ="mobile"  class="form-control input-sm ng-pristine " name="mobile"
+                                placeholder="Mobile" required="" style="">
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="email" class="control-label">City:</label> -->
+                            <input type="text" [(ngModel)] ="city"  class="form-control input-sm ng-pristine " name="city"
+                                placeholder="City" required="" style="">
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="email" class="control-label">Message:</label> -->
+                            <input type="text" [(ngModel)] ="message"  class="form-control input-sm ng-pristine " name="message"
+                                placeholder="Message" required="" style="">
+                        </div>
+                        <div class="form-group">
+                            <button (click) = "register()" class="btn btn-info btn-md" style="width:100%;background: #084094;
+                            border-color: #084094;">Submit</button>
+                        </div>
+                        <!-- <div class="form-group">
+                            <label for="email" class="control-label">City:</label>
+                            <select class="form-control">
+                                <option value="">Angular</option>
+                                <option value="">Sap</option>
+                                <option value="">Android</option>
+                                <option value="">Data Science</option>
+                                <option value="">.Net</option>
+
+                            </select>
+                        </div> -->
+
+                        <div class="form-group">
+                            <!-- ngIf: showButton -->
+
+                            <!-- end ngIf: showButton -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+
+        <!-- <img src="assets/img/home-slider/slider-1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> -->
+        <!-- <ul>
             <li data-index="rs-1587" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"
                 data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="assets/img/home-slider/slider-1.jpg"
                 data-rotate="0" data-saveperformance="off" data-title="Creative" data-param1="01" data-param2="" data-param3=""
                 data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                <!-- MAIN IMAGE -->
                 <img src="assets/img/home-slider/slider-1.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                     data-bgparallax="5" class="rev-slidebg" data-no-retina>
 
-                <!-- LAYER NR. 1 -->
                 <div class="slider_text_box">
                     <div class="tp-caption tp-resizeme first_text" id="slide-1586-layer-1" data-x="['left','left','left','left','15','0']" data-hoffset="['0','80','80','0']"
                         data-y="['top','top','top','top']" data-voffset="['290','290','290','220','130']" data-fontsize="['54','54','54','40','25']"
@@ -39,13 +125,9 @@
                 data-easein="default" data-easeout="default" data-masterspeed="300" data-thumb="assets/img/home-slider/slider-2.jpg"
                 data-rotate="0" data-saveperformance="off" data-title="Creative" data-param1="01" data-param2="" data-param3=""
                 data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
-                <!-- MAIN IMAGE -->
                 <img src="assets/img/home-slider/slider-2.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
                     data-bgparallax="5" class="rev-slidebg" data-no-retina>
-                <!-- LAYERS -->
-                <!-- LAYERS -->
-
-                <!-- LAYER NR. 1 -->
+             
                 <div class="slider_text_box">
                     <div class="tp-caption tp-resizeme first_text" id="slide-1589-layer-1" data-x="['left','left','left','left','15','0']" data-hoffset="['0','80','80','0']"
                         data-y="['top','top','top','top']" data-voffset="['290','290','290','220','130']" data-fontsize="['54','54','54','40','25']"
@@ -68,7 +150,7 @@
                     </div>
                 </div>
             </li>
-        </ul>
+        </ul> -->
     </div>
 </section>
 <!--================End Slider Area =================-->
@@ -119,7 +201,7 @@
             <h2>Popular Courses</h2>
         </div>
         <div class="practice_slider owl-carousel">
-            <div class="item" (click) ="online()">
+            <div class="item" (click)="online()">
                 <div class="practice_item">
                     <div class="p_img_inner">
                         <a class="p_img">
@@ -134,7 +216,7 @@
                     </a> -->
                 </div>
             </div>
-            <div class="item" (click) ="online()">
+            <div class="item" (click)="online()">
                 <div class="practice_item">
                     <div class="p_img_inner">
                         <a class="p_img">
@@ -149,7 +231,7 @@
                     </a> -->
                 </div>
             </div>
-            <div class="item" (click) ="online()">
+            <div class="item" (click)="online()">
                 <div class="practice_item">
                     <div class="p_img_inner">
                         <a class="p_img">
@@ -164,7 +246,7 @@
                     </a> -->
                 </div>
             </div>
-            <div class="item" (click) ="online()">
+            <div class="item" (click)="online()">
                 <div class="practice_item">
                     <div class="p_img_inner">
                         <a class="p_img">
@@ -184,146 +266,146 @@
     </div>
 </section>
 <section class="practice_area pad_25">
-        <div class="container">
-            <div class="left_title">
-                <h2>Future Courses</h2>
-            </div>
-            <div class="practice_slider owl-carousel">
-                <div class="item" (click) ="online()">
-                    <div class="practice_item">
-                        <div class="p_img_inner">
-                            <a class="p_img">
-                                <img src="assets/img/practice/a.JPG" alt="">
-                            </a>
-                            <a class="p_hover">
-                                <h5>View Details</h5>
-                            </a>
-                        </div>
-                     
-                    </div>
-                </div>
-                <div class="item" (click) ="online()">
-                    <div class="practice_item">
-                        <div class="p_img_inner">
-                            <a class="p_img">
-                                <img src="assets/img/practice/b.JPG" alt="">
-                            </a>
-                            <a class="p_hover">
-                                <h5>View Details</h5>
-                            </a>
-                        </div>
-                     
-                    </div>
-                </div>
-                <div class="item" (click) ="online()">
-                    <div class="practice_item">
-                        <div class="p_img_inner">
-                            <a class="p_img">
-                                <img src="assets/img/practice/c.JPG" alt="">
-                            </a>
-                            <a class="p_hover">
-                                <h5>View Details</h5>
-                            </a>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="item" (click) ="online()">
-                    <div class="practice_item">
-                        <div class="p_img_inner">
-                            <a class="p_img">
-                                <img src="assets/img/practice/d.JPG" alt="">
-                            </a>
-                            <a class="p_hover">
-                                <h5>View Details</h5>
-                            </a>
-                        </div>
-                       
-                    </div>
-                </div>
-                <div class="item" (click) ="online()">
-                        <div class="practice_item">
-                            <div class="p_img_inner">
-                                <a class="p_img">
-                                    <img src="assets/img/practice/e.JPG" alt="">
-                                </a>
-                                <a class="p_hover">
-                                    <h5>View Details</h5>
-                                </a>
-                            </div>
-                         
-                        </div>
-                    </div>
-                    <div class="item" (click) ="online()">
-                            <div class="practice_item">
-                                <div class="p_img_inner">
-                                    <a class="p_img">
-                                        <img src="assets/img/practice/f.JPG" alt="">
-                                    </a>
-                                    <a class="p_hover">
-                                        <h5>View Details</h5>
-                                    </a>
-                                </div>
-                            
-                            </div>
-                        </div>
-                        <div class="item" (click) ="online()">
-                                <div class="practice_item">
-                                    <div class="p_img_inner">
-                                        <a class="p_img">
-                                            <img src="assets/img/practice/g.JPG" alt="">
-                                        </a>
-                                        <a class="p_hover">
-                                            <h5>View Details</h5>
-                                        </a>
-                                    </div>
-                                  
-                                </div>
-                            </div>
-                            <div class="item" (click) ="online()">
-                                    <div class="practice_item">
-                                        <div class="p_img_inner">
-                                            <a class="p_img">
-                                                <img src="assets/img/practice/h.JPG" alt="">
-                                            </a>
-                                            <a class="p_hover">
-                                                <h5>View Details</h5>
-                                            </a>
-                                        </div>
-                                     
-                                    </div>
-                                </div>
-                                <div class="item" (click) ="online()">
-                                        <div class="practice_item">
-                                            <div class="p_img_inner">
-                                                <a class="p_img">
-                                                    <img src="assets/img/practice/i.JPG" alt="">
-                                                </a>
-                                                <a class="p_hover">
-                                                    <h5>View Details</h5>
-                                                </a>
-                                            </div>
-                                          
-                                        </div>
-                                    </div>
-                                    <div class="item" (click) ="online()">
-                                            <div class="practice_item">
-                                                <div class="p_img_inner">
-                                                    <a class="p_img">
-                                                        <img src="assets/img/practice/j.JPG" alt="">
-                                                    </a>
-                                                    <a class="p_hover">
-                                                        <h5>View Details</h5>
-                                                    </a>
-                                                </div>
-                                               
-                                            </div>
-                                        </div>
-
-    
-            </div>
+    <div class="container">
+        <div class="left_title">
+            <h2>Future Courses</h2>
         </div>
-    </section>
+        <div class="practice_slider owl-carousel">
+            <div class="item" (click)="online()">
+                <div class="practice_item">
+                    <div class="p_img_inner">
+                        <a class="p_img">
+                            <img src="assets/img/practice/a.JPG" alt="">
+                        </a>
+                        <a class="p_hover">
+                            <h5>View Details</h5>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item" (click)="online()">
+                <div class="practice_item">
+                    <div class="p_img_inner">
+                        <a class="p_img">
+                            <img src="assets/img/practice/b.JPG" alt="">
+                        </a>
+                        <a class="p_hover">
+                            <h5>View Details</h5>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item" (click)="online()">
+                <div class="practice_item">
+                    <div class="p_img_inner">
+                        <a class="p_img">
+                            <img src="assets/img/practice/c.JPG" alt="">
+                        </a>
+                        <a class="p_hover">
+                            <h5>View Details</h5>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item" (click)="online()">
+                <div class="practice_item">
+                    <div class="p_img_inner">
+                        <a class="p_img">
+                            <img src="assets/img/practice/d.JPG" alt="">
+                        </a>
+                        <a class="p_hover">
+                            <h5>View Details</h5>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item" (click)="online()">
+                <div class="practice_item">
+                    <div class="p_img_inner">
+                        <a class="p_img">
+                            <img src="assets/img/practice/e.JPG" alt="">
+                        </a>
+                        <a class="p_hover">
+                            <h5>View Details</h5>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item" (click)="online()">
+                <div class="practice_item">
+                    <div class="p_img_inner">
+                        <a class="p_img">
+                            <img src="assets/img/practice/f.JPG" alt="">
+                        </a>
+                        <a class="p_hover">
+                            <h5>View Details</h5>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item" (click)="online()">
+                <div class="practice_item">
+                    <div class="p_img_inner">
+                        <a class="p_img">
+                            <img src="assets/img/practice/g.JPG" alt="">
+                        </a>
+                        <a class="p_hover">
+                            <h5>View Details</h5>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item" (click)="online()">
+                <div class="practice_item">
+                    <div class="p_img_inner">
+                        <a class="p_img">
+                            <img src="assets/img/practice/h.JPG" alt="">
+                        </a>
+                        <a class="p_hover">
+                            <h5>View Details</h5>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item" (click)="online()">
+                <div class="practice_item">
+                    <div class="p_img_inner">
+                        <a class="p_img">
+                            <img src="assets/img/practice/i.JPG" alt="">
+                        </a>
+                        <a class="p_hover">
+                            <h5>View Details</h5>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="item" (click)="online()">
+                <div class="practice_item">
+                    <div class="p_img_inner">
+                        <a class="p_img">
+                            <img src="assets/img/practice/j.JPG" alt="">
+                        </a>
+                        <a class="p_hover">
+                            <h5>View Details</h5>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
 
 <!--================End Video Area =================-->
 
@@ -370,7 +452,7 @@
 
 
 <!--================Contact Querry Area =================-->
-<section class="contact_querry_area pad_100">
+<!-- <section class="contact_querry_area pad_100">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-sm-6">
@@ -405,7 +487,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!--================End Contact Querry Area =================-->
 
 <app-footer></app-footer>

@@ -42,7 +42,7 @@ export class UploadComponent implements OnInit {
     const formModel = this.prepareSave();
 
     this._uploadService.upload(formModel).subscribe(data => {
-      if (data.success) {
+      if (data) {
         this.showForm = false;
       }
     });

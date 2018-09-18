@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from  '@angular/router';
+import { Router } from '@angular/router';
+import { HomeService } from './home.service';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +9,18 @@ import {Router} from  '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor( private _router: Router) { }
-
+  constructor(
+    private _router: Router,
+    public _homeService: HomeService,
+    public toastr: ToastrManager
+  ) {}
+  email = '';
+  name = '';
+  mobile = '';
+  city = '';
+  message = '';
   ngOnInit() {
-    $(document).ready(function () {
-
-
+    $(document).ready(function() {
       /*----------------------------------------------------*/
       /*  Main Slider js
       /*----------------------------------------------------*/
@@ -37,7 +44,8 @@ export class HomeComponent implements OnInit {
                 hide_onleave: true,
                 hide_delay: 200,
                 hide_delay_mobile: 1200,
-                tmp: '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
+                tmp:
+                  '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
                 left: {
                   h_align: 'left',
                   v_align: 'center',
@@ -50,7 +58,7 @@ export class HomeComponent implements OnInit {
                   h_offset: 5,
                   v_offset: 0
                 }
-              },
+              }
             },
             responsiveLevels: [4096, 1320, 1199, 992, 767, 480],
             gridwidth: [1170, 1170, 960, 720, 700, 300],
@@ -59,7 +67,7 @@ export class HomeComponent implements OnInit {
             fallbacks: {
               simplifyAll: 'off',
               nextSlideOnWindowFocus: 'off',
-              disableFocusListener: false,
+              disableFocusListener: false
             }
           });
         }
@@ -90,7 +98,8 @@ export class HomeComponent implements OnInit {
                 hide_onleave: true,
                 hide_delay: 200,
                 hide_delay_mobile: 1200,
-                tmp: '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
+                tmp:
+                  '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
                 left: {
                   h_align: 'left',
                   v_align: 'center',
@@ -103,7 +112,7 @@ export class HomeComponent implements OnInit {
                   h_offset: 5,
                   v_offset: 0
                 }
-              },
+              }
             },
             responsiveLevels: [4096, 1320, 1199, 992, 767, 480],
             gridwidth: [1170, 1170, 1000, 750, 700, 320],
@@ -113,7 +122,24 @@ export class HomeComponent implements OnInit {
               type: 'mouse',
               origo: 'slidercenter',
               speed: 2000,
-              levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 46, 47, 48, 49, 50, 55],
+              levels: [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                12,
+                16,
+                10,
+                50,
+                46,
+                47,
+                48,
+                49,
+                50,
+                55
+              ],
               disable_onmobile: 'on'
             },
             shadow: 0,
@@ -135,7 +161,7 @@ export class HomeComponent implements OnInit {
             fallbacks: {
               simplifyAll: 'off',
               nextSlideOnWindowFocus: 'off',
-              disableFocusListener: false,
+              disableFocusListener: false
             }
           });
         }
@@ -165,7 +191,8 @@ export class HomeComponent implements OnInit {
                 hide_onleave: true,
                 hide_delay: 200,
                 hide_delay_mobile: 1200,
-                tmp: '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
+                tmp:
+                  '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
                 left: {
                   h_align: 'left',
                   v_align: 'center',
@@ -178,7 +205,7 @@ export class HomeComponent implements OnInit {
                   h_offset: 5,
                   v_offset: 0
                 }
-              },
+              }
             },
             responsiveLevels: [4096, 1320, 1199, 992, 767, 480],
             gridwidth: [1170, 1170, 1000, 750, 550, 300],
@@ -187,7 +214,7 @@ export class HomeComponent implements OnInit {
             fallbacks: {
               simplifyAll: 'off',
               nextSlideOnWindowFocus: 'off',
-              disableFocusListener: false,
+              disableFocusListener: false
             }
           });
         }
@@ -217,7 +244,8 @@ export class HomeComponent implements OnInit {
                 hide_onleave: true,
                 hide_delay: 200,
                 hide_delay_mobile: 1200,
-                tmp: '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
+                tmp:
+                  '<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
                 left: {
                   h_align: 'left',
                   v_align: 'center',
@@ -230,7 +258,7 @@ export class HomeComponent implements OnInit {
                   h_offset: 5,
                   v_offset: 0
                 }
-              },
+              }
             },
             responsiveLevels: [4096, 1320, 1199, 992, 767, 480],
             gridwidth: [1170, 1170, 1000, 750, 550, 300],
@@ -239,7 +267,7 @@ export class HomeComponent implements OnInit {
             fallbacks: {
               simplifyAll: 'off',
               nextSlideOnWindowFocus: 'off',
-              disableFocusListener: false,
+              disableFocusListener: false
             }
           });
         }
@@ -260,20 +288,23 @@ export class HomeComponent implements OnInit {
             smartSpeed: 1500,
             dots: true,
             navContainerClass: 'practice_arrow',
-            navText: ['<img src="img/arrow.png" alt="">', '<img src="img/arrow-left.png" alt="">'],
+            navText: [
+              '<img src="img/arrow.png" alt="">',
+              '<img src="img/arrow-left.png" alt="">'
+            ],
             responsiveClass: true,
             responsive: {
               0: {
-                items: 1,
+                items: 1
               },
               600: {
-                items: 2,
+                items: 2
               },
               800: {
-                items: 3,
+                items: 3
               },
               1060: {
-                items: 4,
+                items: 4
               }
             }
           });
@@ -309,14 +340,13 @@ export class HomeComponent implements OnInit {
                 margin: 100
               },
               1199: {
-                items: 2,
+                items: 2
               }
             }
           });
         }
       }
       testimonial_slider();
-
 
       /*----------------------------------------------------*/
       /*  testimonial Slider Two
@@ -334,16 +364,16 @@ export class HomeComponent implements OnInit {
             responsiveClass: true,
             responsive: {
               0: {
-                items: 1,
+                items: 1
               },
               600: {
-                items: 2,
+                items: 2
               },
               800: {
-                items: 2,
+                items: 2
               },
               1060: {
-                items: 3,
+                items: 3
               }
             }
           });
@@ -367,16 +397,16 @@ export class HomeComponent implements OnInit {
             responsiveClass: true,
             responsive: {
               0: {
-                items: 1,
+                items: 1
               },
               480: {
-                items: 2,
+                items: 2
               },
               600: {
-                items: 4,
+                items: 4
               },
               992: {
-                items: 6,
+                items: 6
               }
             }
           });
@@ -384,11 +414,31 @@ export class HomeComponent implements OnInit {
       }
       client_slider();
     });
-
   }
 
   online() {
     this._router.navigate(['/online']);
   }
 
+  register() {
+    const body = {
+      email: this.email,
+      name: this.name,
+      mobile: this.mobile,
+      city: this.city,
+      message: this.message
+    };
+
+    this._homeService.register(body).subscribe(data => {
+      console.log('data is', data);
+      if (data) {
+        this.toastr.successToastr(
+          'Thank you for registering RST Gloabal',
+          'Success!'
+        );
+      } else {
+        this.toastr.errorToastr('Error.', 'Error!');
+      }
+    });
+  }
 }

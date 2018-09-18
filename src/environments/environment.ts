@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://142.93.212.198:5510'
+  apiUrl: 'http://rstglobaltech.com/rst/server/api'
   // apiUrl: 'http://139.59.7.203:5510'
 
 };

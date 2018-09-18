@@ -1,0 +1,28 @@
+.home_table {
+  /* background:#eee; */
+  padding: 15px;
+  color:#eee
+}
+.home_form {
+  background: #ee6b00;
+  padding: 15px;
+  color: #fff;
+  border-radius: 10px;
+
+}
+.home_banner {
+  background: url("../../assets/img/home-slider/1.jpg");
+  /* opacity: 0.7; */
+}
+.p_text {
+  margin-left: 18px;
+  /* color: #ff00b1; */
+  color: #fff;
+  font-weight: 900;
+}
+.icon_size {
+  color: green;
+  font-size: 25px;
+  background: aliceblue;
+  border-radius: 50%;
+}

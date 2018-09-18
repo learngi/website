@@ -22,6 +22,7 @@ export class AppSettings {
     LOGIN: environment.apiUrl + '/auth',
     REGISTRATION: environment.apiUrl + '/insertUsers',
     FORGOT_PASSWORD: environment.apiUrl + '/forget',
-    FILE_UPLOAD: environment.apiUrl + '/upload'
+    FILE_UPLOAD: environment.apiUrl + '/upload',
+    REGISTER: environment.apiUrl + '/register'
   };
 }

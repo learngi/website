@@ -5,34 +5,69 @@
             <span></span>
             <span></span>
         </div>
-      
+
     </div>
 </div>
 <!--================Side Menu Area =================-->
 <!--================Header Area =================-->
 <header class="main_menu_area" style="    padding-top: 18px;">
-    <!-- <div class="header_top">
+    <div class="header_top">
         <div class="container">
             <div class="pull-left">
+                <ul class="header_social">
+                    <li>
+                        <a style="font-size:10px">
+                            <i class="fa fa-envelope"></i> Info@rstglobaltech.com
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+
+                            <button class="btn btn-info btn-orange">Become an instructor</button>
+                        </a>
+                    </li>
+                    <!-- <li>
+                                <a>
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="fa fa-google-plus"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li> -->
+                </ul>
+                <!-- <li>
+                            <a>
+                                <i class="fa fa-envelope"></i> Info@rstglobaltech.com
+                            </a>
+                        </li>
+
                 <a>
                     <i class="flaticon-phone-receiver"></i>+91-124-4274447</a>
                 <a>
-                    <i class="flaticon-send"></i>Free Enquiry</a>
-                <a (click)="login()">
+                    <i class="flaticon-send"></i>Bacome an instructor</a> -->
+                <!-- <a (click)="login()">
                     <i class="flaticon-send"></i>Login</a>
                 <a (click)="register()">
                     <i class="flaticon-send"></i>Enroll</a>
                 <a *ngIf="role == 'admin'" (click)="upload()">
-                    <i class="flaticon-send"></i>Upload</a>
+                    <i class="flaticon-send"></i>Upload</a> -->
             </div>
             <div class="pull-right">
                 <ul class="header_social">
                     <li>
                         <a>
-                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-phone"></i> +91-124-4274447
                         </a>
                     </li>
-                    <li>
+
+                    <!-- <li>
                         <a>
                             <i class="fa fa-twitter"></i>
                         </a>
@@ -46,21 +81,21 @@
                         <a>
                             <i class="fa fa-linkedin"></i>
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
 
-                <select class="selectpicker">
+                <!-- <select class="selectpicker">
                     <option>EN</option>
                     <option>BN</option>
                     <option>IN</option>
                 </select>
                 <a *ngIf="token" (click)="logout()">
                     LogOut
-                </a>
+                </a> -->
 
             </div>
         </div>
-    </div> -->
+    </div>
     <div class="menu_inner_area">
         <div class="container-fluide">
             <nav class="navbar navbar-default">
@@ -82,10 +117,10 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li [ngClass]="{'active':pageType == 'home'}" (click)="home()">
-                            <a data-toggle="dropdown" role="button" >Home</a>
+                            <a data-toggle="dropdown" role="button">Home</a>
                         </li>
                         <li [ngClass]="{'active':pageType == 'about'}" class="dropdown submenu" (click)="about()">
-                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" >About Us</a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button">About Us</a>
 
                         </li>
                         <!-- <li class="dropdown submenu" [ngClass]="{'active':pageType == 'selfplaced'}" (click)="selfplaced()">
@@ -93,23 +128,27 @@
 
                         </li> -->
                         <li class="dropdown submenu" [ngClass]="{'active':pageType == 'online'}" (click)="online()">
-                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Online Training</a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false">Online Training</a>
 
                         </li>
                         <li class="dropdown submenu" [ngClass]="{'active':pageType == 'classtraining'}" (click)="classTraining()">
-                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ClassRoom Training</a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false">ClassRoom Training</a>
 
                         </li>
                         <li class="dropdown submenu" [ngClass]="{'active':pageType == 'internship'}" (click)="internship()">
-                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Internship</a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false">Internship</a>
 
                         </li>
                         <li class="dropdown submenu" [ngClass]="{'active':pageType == 'corporate'}" (click)="corporate()">
-                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Corporate Batch</a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false">Corporate Batch</a>
 
                         </li>
                         <li [ngClass]="{'active':pageType == 'contact'}" (click)="contact()">
-                            <a>Contact Us</a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Contact Us</a>
                         </li>
                     </ul>
                     <!-- <ul class="nav navbar-nav navbar-right">

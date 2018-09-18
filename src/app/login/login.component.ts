@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   login() {
     const body = { username: this.username, password: this.password };
     this._loginService.login(body).subscribe(data => {
-      if (data.success) {
+      if (data) {
         this._router.navigate(['/home']);
         console.log('success');
       }

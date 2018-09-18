@@ -299,7 +299,7 @@ i:before {
 ============================================================================================ */
 .header_top {
   background: #0b1525;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
 }
 
 .header_top .pull-left a {
@@ -311,7 +311,7 @@ i:before {
   text-transform: uppercase;
   margin-right: 60px;
   position: relative;
-  line-height: 62px;
+  line-height: 50px;
   display: inline-block;
   -webkit-transition: all 300ms linear 0s;
   -o-transition: all 300ms linear 0s;
@@ -319,7 +319,7 @@ i:before {
 }
 
 .header_top .pull-left a:before {
-  content: "";
+  /* content: ""; */
   height: 100%;
   width: 1px;
   background: #414047;
@@ -347,14 +347,19 @@ i:before {
 }
 
 .header_top .pull-left a:last-child i {
+  /* font-size: 25px;
+  line-height: 25px;
+  position: relative;
+  top: 2.5px; */
   font-size: 25px;
   line-height: 25px;
   position: relative;
-  top: 2.5px;
+  top: 0.5px;
+  left: 18px;
 }
 
 .header_top .pull-left a:last-child i:before {
-  font-size: 25px;
+  font-size: 15px;
 }
 
 .header_top .pull-left a:hover {
@@ -372,7 +377,7 @@ i:before {
 }
 
 .header_top .pull-right .header_social:before {
-  content: "";
+  /* content: ""; */
   height: 15px;
   width: 1px;
   background: #636266;
@@ -385,7 +390,7 @@ i:before {
 }
 
 .header_top .pull-right .header_social li a {
-  line-height: 62px;
+  line-height: 42px;
 }
 
 .header_top .pull-right .btn-group.bootstrap-select {
