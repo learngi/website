@@ -23,7 +23,8 @@
                     <li>
                         <a>
 
-                            <button class="btn btn-info btn-orange">Become an instructor</button>
+                            <button class="btn btn-info btn-orange" data-toggle="modal" data-target="#myModal1">Become
+                                an instructor</button>
                         </a>
                     </li>
                     <!-- <li>
@@ -137,7 +138,7 @@
                                 aria-expanded="false">ClassRoom Training</a>
 
                         </li>
-                        <li class="dropdown submenu" [ngClass]="{'active':pageType == 'internship'}" (click)="internship()">
+                        <li class="dropdown submenu" [ngClass]="{'active':pageType == 'intership'}" (click)="internship()">
                             <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                                 aria-expanded="false">Internship</a>
 
@@ -148,7 +149,8 @@
 
                         </li>
                         <li [ngClass]="{'active':pageType == 'contact'}" (click)="contact()">
-                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Contact Us</a>
+                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Contact
+                                Us</a>
                         </li>
                     </ul>
                     <!-- <ul class="nav navbar-nav navbar-right">
@@ -160,3 +162,66 @@
         </div>
     </div>
 </header>
+
+<div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Become an instructor and start teaching</h4>
+            </div>
+            <div class="modal-body">
+                <div id="right_container">
+                    <div id="signup_container" class="hidden-xs">
+                        <form role="form" autocomplete="off" novalidate="" class="signup-form ng-pristine " name="signupForm1">
+                            <div class="form-group">
+                                <label for="email" class="control-label">Your Email:</label>
+                                <input type="email" [(ngModel)]="email" class="form-control input-sm ng-pristine " name="email"
+                                    placeholder="john@example.com" required="" style="">
+                            </div>
+                            <!-- <div class="form-group">
+                                    <label for="email" class="control-label">Password</label>
+                                    <input type="password" class="form-control input-sm ng-pristine " name="email" placeholder="password"
+                                        required="" style="">
+                                </div> -->
+                            <div class="form-group">
+                                <label for="email" class="control-label">Your Name:</label>
+                                <input type="text" [(ngModel)]="name" class="form-control input-sm ng-pristine " name="name"
+                                    placeholder="james" required="" style="">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="control-label">Mobile:</label>
+                                <input type="number" [(ngModel)]="mobile" class="form-control input-sm ng-pristine "
+                                    name="mobile" placeholder="9876543210" required="" style=""  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="control-label">Experience:</label>
+                                <input type="text" [(ngModel)]="city" class="form-control input-sm ng-pristine " name="city"
+                                    placeholder="Experience" required="" style="">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="control-label">Preferable Training:</label>
+                                <input type="text" [(ngModel)]="message" class="form-control input-sm ng-pristine "
+                                    name="message" placeholder="Preferable Training" required="" style="">
+                            </div>
+
+                            <div class="form-group">
+                                <!-- ngIf: showButton -->
+
+                                <!-- end ngIf: showButton -->
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button [disabled]="!name || !email" data-dismiss="modal" (click)="register1()" type="submit" ng-if="showButton" class="btn btn-primary ng-scope">Sign
+                    up</button>
+                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+            </div>
+        </div>
+
+    </div>
+</div>

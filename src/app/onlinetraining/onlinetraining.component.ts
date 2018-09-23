@@ -38,6 +38,7 @@ export class OnlinetrainingComponent implements OnInit {
 
     this.loginService.register(body).subscribe(data => {
       if (data) {
+        this.empty();
         this.toastr.successToastr(
           'Thank you for registering RST Gloabal',
           'Success!'
@@ -46,5 +47,12 @@ export class OnlinetrainingComponent implements OnInit {
         this.toastr.errorToastr('Error.', 'Error!');
       }
     });
+  }
+  empty() {
+    this.email = '';
+    this.name = '';
+    this.mobile = '';
+    this.city = '';
+    this.message = '';
   }
 }

@@ -1,6 +1,8 @@
 /// <reference path="../../../typings/index.d.ts" />
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { HomeService } from '../home//home.service';
+import { ToastrManager } from 'ng6-toastr-notifications';
 declare var $;
 
 @Component({
@@ -9,10 +11,20 @@ declare var $;
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  constructor(private _routes: Router, private _route: ActivatedRoute) {}
+  constructor(
+    private _routes: Router,
+    private _route: ActivatedRoute,
+    public _homeService: HomeService,
+    public toastr: ToastrManager
+  ) {}
   token = sessionStorage.getItem('token');
   pageType = '';
   role = sessionStorage.getItem('role');
+  email = '';
+  name = '';
+  mobile = '';
+  city = '';
+  message = '';
   ngOnInit() {
     this.pageType = this._route.snapshot.url[0].path;
     // tslint:disable-next-line:no-unused-expression
@@ -94,5 +106,34 @@ export class HeaderComponent implements OnInit {
   }
   internship() {
     this._routes.navigate(['/intership']);
+  }
+  register1() {
+    const body = {
+      email: this.email,
+      name: this.name,
+      mobile: this.mobile,
+      city: this.city,
+      message: this.message
+    };
+
+    this._homeService.register(body).subscribe(data => {
+      console.log('data is', data);
+      if (data) {
+        this.empty();
+        this.toastr.successToastr(
+          'Thank you for registering RST Gloabal',
+          'Success!'
+        );
+      } else {
+        this.toastr.errorToastr('Error.', 'Error!');
+      }
+    });
+  }
+  empty() {
+    this.email = '';
+    this.name = '';
+    this.mobile = '';
+    this.city = '';
+    this.message = '';
   }
 }

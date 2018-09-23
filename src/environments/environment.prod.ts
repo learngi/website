@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://rstglobaltech.com/server/api'
+  apiUrl: 'http://rstglobaltech.com/rst/server/api'
 };

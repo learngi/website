@@ -29,7 +29,7 @@
                                 <figure>
                                     <h3 class="hoverHead">MEAN </h3>
                                     <p class="parahover">Duration 45 Days</p>
-                                    <a class="btn btn-read" style="margin-left:10px" data-toggle="modal" data-target="#myModal">Rgistere</a>
+                                    <a class="btn btn-read" style="margin-left:10px" data-toggle="modal" data-target="#myModal">Register</a>
                                     <a class="btn btn-read" href="http://rstglobaltech.com/rst/upload/No%20syllabus.pdf"
                                         target="blank" style="margin-left:10px">Download</a>
                                 </figure>
@@ -41,7 +41,7 @@
                                 <figure>
                                     <h3 class="hoverHead">Data science </h3>
                                     <p class="parahover">Duration 45 Days</p>
-                                    <a class="btn btn-read" style="margin-left:10px" data-toggle="modal" data-target="#myModal">Reagister</a>
+                                    <a class="btn btn-read" style="margin-left:10px" data-toggle="modal" data-target="#myModal">Register</a>
                                     <a class="btn btn-read" href="http://rstglobaltech.com/rst/upload/Data%20science.pdf"
                                         style="margin-left:10px" target="blank">Download</a>
                                 </figure>
@@ -53,7 +53,7 @@
                                 <figure>
                                     <h3 class="hoverHead">Python </h3>
                                     <p class="parahover">Duration 45 Days</p>
-                                    <a class="btn btn-read" style="margin-left:10px" data-toggle="modal" data-target="#myModal">Reagister</a>
+                                    <a class="btn btn-read" style="margin-left:10px" data-toggle="modal" data-target="#myModal">Register</a>
                                     <a class="btn btn-read" href="http://rstglobaltech.com/rst/upload/Python.pdf" style="margin-left:10px"
                                         target="blank">Download</a>
                                 </figure>
@@ -244,7 +244,7 @@
                         template language and it allows for the extension...</p>
                 </div>
                 <div class="post-meta">
-                    <a class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip btn_border" data-toggle="modal" data-target="#myModal"">Rgistere</a>
+                    <a class="text-theme-colored2 font-14 text-gray-darkgray pull-right flip btn_border" data-toggle="modal" data-target="#myModal"">Register</a>
                 </div>
             </div>
             <div class="col-sm-4 col-xs-6 products transport sector">
@@ -338,7 +338,7 @@
                             <div class="form-group">
                                 <label for="email" class="control-label">Mobile:</label>
                                 <input type="number" [(ngModel)]="mobile" class="form-control input-sm ng-pristine "
-                                    name="mobile" placeholder="9876543210" required="" style="">
+                                    name="mobile" placeholder="9876543210" required="" style=""  pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;">
                             </div>
                             <div class="form-group">
                                 <label for="email" class="control-label">City:</label>
@@ -361,7 +361,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button data-dismiss="modal" (click) ="register()" type="submit" ng-if="showButton" class="btn btn-primary ng-scope">Sign up</button>
+                <button [disabled]="!name || !email" data-dismiss="modal" (click) ="register()" type="submit" ng-if="showButton" class="btn btn-primary ng-scope">Sign up</button>
                 <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
             </div>
         </div>
